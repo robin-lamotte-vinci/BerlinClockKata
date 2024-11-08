@@ -137,5 +137,11 @@ describe("Main class should implements a berlin clock\n", function () {
   
         expect(result).toBe("YYROOOOOOOO");
     });
+
+    it("given 16 should return 'YYROOOOOOOO'", function () {
+        const result = main.convertFiveMinutesRow(16);
+  
+        expect(result).toBe("YYROOOOOOOO");
+    });
   });
 });
