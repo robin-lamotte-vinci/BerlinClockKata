@@ -21,5 +21,11 @@ describe("Main class should implements a berlin clock", function () {
 
       expect(result).toBe("YYOO");
     });
+
+    it("given 3 should return 'YYYO'", function () {
+        const result = main.convertSimpleMinutesRow(3);
+  
+        expect(result).toBe("YYYO");
+      });
   });
 });
