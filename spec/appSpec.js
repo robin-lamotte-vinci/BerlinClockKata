@@ -30,7 +30,7 @@ describe("Main class should implements a berlin clock\n", function () {
 
     it("given 4 should return 'YYYY'", function () {
       const result = main.convertSimpleMinutesRow(4);
-      
+
       expect(result).toBe("YYYY");
     });
 
@@ -38,6 +38,12 @@ describe("Main class should implements a berlin clock\n", function () {
         const result = main.convertSimpleMinutesRow(5);
   
         expect(result).toBe("OOOO");
+    });
+
+    it("given 6 should return 'YOOO'", function () {
+        const result = main.convertSimpleMinutesRow(6);
+  
+        expect(result).toBe("YOOO");
     });
   });
 });
