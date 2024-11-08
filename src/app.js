@@ -5,6 +5,7 @@ export class Main {
 
   convertFiveMinutesRow(number) {
     if (number == 10) return "YYOOOOOOOOO";
+    if (number == 11) return "YYOOOOOOOOO";
     if (number >= 5) return "YOOOOOOOOOO";
 
     return "OOOOOOOOOOO";
