@@ -23,14 +23,14 @@ describe("Main class should implements a berlin clock\n", function () {
     });
 
     it("given 3 should return 'YYYO'", function () {
-        const result = main.convertSimpleMinutesRow(3);
-  
-        expect(result).toBe("YYYO");
-      });
+      const result = main.convertSimpleMinutesRow(3);
+
+      expect(result).toBe("YYYO");
+    });
 
     it("given 4 should return 'YYYY'", function () {
-        const result = main.convertSimpleMinutesRow(4);
-        expect(result).toBe("YYYY");
+      const result = main.convertSimpleMinutesRow(4);
+      expect(result).toBe("YYYY");
     });
   });
 });
