@@ -3,7 +3,7 @@ import { Main } from "../src/app.js";
 describe("Main class should implements a berlin clock\n", function () {
   const main = new Main();
 
-  describe("convertSingleMinutesRow method should return the conversion of a number into a single minutes row", function () {
+  describe("convertSingleMinutesRow method should return the conversion of a number into a single minutes row\n", function () {
     it("given 0 should return 'OOOO'", function () {
       const result = main.convertSimpleMinutesRow(0);
 
@@ -83,7 +83,7 @@ describe("Main class should implements a berlin clock\n", function () {
     });
   });
 
-  describe("convertFiveMinutesRow method should return the conversion of a number into a five minutes row", function () {
+  describe("convertFiveMinutesRow method should return the conversion of a number into a five minutes row\n", function () {
     it("given 0 should return 'OOOOOOOOOOO'", function () {
       const result = main.convertFiveMinutesRow(0);
 
