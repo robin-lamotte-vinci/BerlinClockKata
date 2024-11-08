@@ -5,5 +5,11 @@ describe("Main class should implements a berlin clock", function() {
 
     describe("convertSingleMinutesRow method should return the conversion of a number into a single minutes row", function() {
         
+        it("given 0 should return 'OOOO'", function() {
+            
+            const result = main.convertSimpleMinutesRow(0);
+            
+            expect(result).toBe("OOOO");
+        });
     });
 });
