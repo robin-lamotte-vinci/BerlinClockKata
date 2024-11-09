@@ -1,9 +1,9 @@
 export class BerlinClockConverter {
   convertSimpleMinutesRow(number) {
-    return this.getYellowLightsForSimpleMinutes(number) + this.getTurnedOffLightsForSimpleMinutes(number);
+    return this.#getYellowLightsForSimpleMinutes(number) + this.getTurnedOffLightsForSimpleMinutes(number);
   };
 
-  getYellowLightsForSimpleMinutes(number) {
+  #getYellowLightsForSimpleMinutes(number) {
     return "Y".repeat(number % 5);
   };
 
