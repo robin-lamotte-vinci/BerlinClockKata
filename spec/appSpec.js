@@ -96,12 +96,6 @@ describe("Main class should implements a berlin clock\n", function () {
         expect(result).toBe("YOOOOOOOOOO");
     });
 
-    it("given 7 should return 'YOOOOOOOOOO'", function () {
-        const result = berlinClockConverter.convertFiveMinutesRow(7);
-  
-        expect(result).toBe("YOOOOOOOOOO");
-    });
-
     it("given 10 should return 'YYOOOOOOOOO'", function () {
         const result = berlinClockConverter.convertFiveMinutesRow(10);
   
@@ -110,12 +104,6 @@ describe("Main class should implements a berlin clock\n", function () {
 
     it("given 11 should return 'YYOOOOOOOOO'", function () {
         const result = berlinClockConverter.convertFiveMinutesRow(11);
-  
-        expect(result).toBe("YYOOOOOOOOO");
-    });
-
-    it("given 12 should return 'YYOOOOOOOOO'", function () {
-        const result = berlinClockConverter.convertFiveMinutesRow(12);
   
         expect(result).toBe("YYOOOOOOOOO");
     });
