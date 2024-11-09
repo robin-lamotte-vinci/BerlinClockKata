@@ -1,6 +1,10 @@
 export class Main {
   convertSimpleMinutesRow(number) {
-    return "Y".repeat(number % 5) + "O".repeat(4 - number % 5);
+    return this.getYellowLightsForSimpleMinutes(number) + "O".repeat(4 - number % 5);
+  };
+
+  getYellowLightsForSimpleMinutes(number) {
+    return "Y".repeat(number % 5);
   };
 
   convertFiveMinutesRow(number) {
