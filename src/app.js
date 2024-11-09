@@ -1,13 +1,13 @@
 export class BerlinClockConverter {
   convertSimpleMinutesRow(number) {
-    return this.#getYellowLightsForSimpleMinutes(number) + this.getTurnedOffLightsForSimpleMinutes(number);
+    return this.#getYellowLightsForSimpleMinutes(number) + this.#getTurnedOffLightsForSimpleMinutes(number);
   };
 
   #getYellowLightsForSimpleMinutes(number) {
     return "Y".repeat(number % 5);
   };
 
-  getTurnedOffLightsForSimpleMinutes(number) {
+  #getTurnedOffLightsForSimpleMinutes(number) {
     return "O".repeat(4 - (number % 5));
   };
 
