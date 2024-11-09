@@ -1,4 +1,4 @@
-export class Main {
+export class BerlinClockConverter {
   convertSimpleMinutesRow(number) {
     return this.getYellowLightsForSimpleMinutes(number) + this.getTurnedOffLightsForSimpleMinutes(number);
   };

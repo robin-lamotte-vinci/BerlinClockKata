@@ -1,7 +1,7 @@
-import { Main } from "../src/app.js";
+import { BerlinClockConverter } from "../src/app.js";
 
 describe("Main class should implements a berlin clock\n", function () {
-  const main = new Main();
+  const main = new BerlinClockConverter();
 
   describe("convertSingleMinutesRow method should return the conversion of a number into a single minutes row\n", function () {
     it("given 0 should return 'OOOO'", function () {
