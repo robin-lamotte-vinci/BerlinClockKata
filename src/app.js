@@ -25,11 +25,7 @@ export class BerlinClockConverter {
     const numberOfTurnedOnLights = Math.floor(number / 5);
     let turnedOnLights = "";
     for (let i = 1; i <= numberOfTurnedOnLights; i++) {
-      if (i % 3 === 0) {
-        turnedOnLights += "R";
-      } else {
-        turnedOnLights += "Y";
-      }
+      turnedOnLights += (i%3 === 0) ? "R" : "Y";
     }
     return turnedOnLights;
   }
