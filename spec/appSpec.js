@@ -186,5 +186,11 @@ describe("BerlinClockConverter class should implements the conversion time in a 
       expect(result).toBe("YYRYYRYYROO");
     });
 
+    it("given 46 should return 'YYRYYRYYROO'", function () {
+      const result = berlinClockConverter.convertFiveMinutesRow(46);
+
+      expect(result).toBe("YYRYYRYYROO");
+    });
+
   });
 });
