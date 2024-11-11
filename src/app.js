@@ -12,8 +12,7 @@ export class BerlinClockConverter {
   };
 
   convertFiveMinutesRow(number) {
-    if (number == 56) return "YYRYYRYYRYY"; 
-    if (number == 55) return "YYRYYRYYRYY"; 
+    if (number >= 55) return "YYRYYRYYRYY"; 
     if (number >= 50) return "YYRYYRYYRYO"; 
     if (number >= 45) return "YYRYYRYYROO"; 
     if (number >= 40) return "YYRYYRYYOOO"; 
