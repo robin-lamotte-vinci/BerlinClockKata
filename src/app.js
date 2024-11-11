@@ -12,18 +12,20 @@ export class BerlinClockConverter {
   };
 
   convertFiveMinutesRow(number) {
-    if (number >= 55) return "YYRYYRYYRYY"; 
-    if (number >= 50) return "YYRYYRYYRYO"; 
-    if (number >= 45) return "YYRYYRYYROO"; 
-    if (number >= 40) return "YYRYYRYYOOO"; 
-    if (number >= 35) return "YYRYYRYOOOO"; 
-    if (number >= 30) return "YYRYYROOOOO"; 
-    if (number >= 25) return "YYRYYOOOOOO";
-    if (number >= 20) return "YYRYOOOOOOO";
-    if (number >= 15) return "YYROOOOOOOO";
-    if (number >= 10) return "YYOOOOOOOOO";
-    if (number >= 5) return "YOOOOOOOOOO";
+    const numberOfTurnedOnLights = Math.floor(number / 5);
+    let turnedOnLights = "";
+    for (let i = 1; i <= numberOfTurnedOnLights; i++) {
+      if (i % 3 === 0) {
+        turnedOnLights += "R";
+      } else {
+        turnedOnLights += "Y";
+      }
+    }
 
-    return "OOOOOOOOOOO";
+    const numberOfTurnedOffLights = 11 - Math.floor(number / 5);
+    const turnedOffLights = "O".repeat(numberOfTurnedOffLights);
+
+    return turnedOnLights + turnedOffLights;
   };
+
 };
