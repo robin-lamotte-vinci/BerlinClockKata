@@ -14,12 +14,10 @@ export class BerlinClockConverter {
   convertFiveMinutesRow(number) {
     const turnedOnLights = this.getTurnedOnLightsForFiveMinutes(number);
 
-    const numberOfTurnedOffLights = 11 - Math.floor(number / 5);
-    const turnedOffLights = "O".repeat(numberOfTurnedOffLights);
+    const turnedOffLights = this.getTurnedOffLightsForFiveMinutes(number);
 
     return turnedOnLights + turnedOffLights;
   };
-
 
   getTurnedOnLightsForFiveMinutes(number) {
     const numberOfTurnedOnLights = Math.floor(number / 5);
@@ -28,5 +26,11 @@ export class BerlinClockConverter {
       turnedOnLights += (i%3 === 0) ? "R" : "Y";
     }
     return turnedOnLights;
-  }
+  };  
+  
+  getTurnedOffLightsForFiveMinutes(number) {
+    const numberOfTurnedOffLights = 11 - Math.floor(number / 5);
+    
+    return "O".repeat(numberOfTurnedOffLights);
+  };
 };
