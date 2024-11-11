@@ -3,7 +3,7 @@ import { BerlinClockConverter } from "../src/app.js";
 describe("BerlinClockConverter class should implements the conversion time in a berlin clock representation\n", function () {
   const berlinClockConverter = new BerlinClockConverter();
 
-  describe("convertSingleMinutesRow method should return the conversion of a number into a single minutes row\n", function () {
+  describe("convertSimpleMinutesRow method should return the conversion of a number into a single minutes row\n", function () {
     it("given 0 should return 'OOOO'", function () {
       const result = berlinClockConverter.convertSimpleMinutesRow(0);
 
