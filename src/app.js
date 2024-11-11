@@ -12,7 +12,7 @@ export class BerlinClockConverter {
   };
 
   convertFiveMinutesRow(number) {
-    return this.#getTurnedOnLightsForFiveMinutes(number) + this.getTurnedOffLightsForFiveMinutes(number);
+    return this.#getTurnedOnLightsForFiveMinutes(number) + this.#getTurnedOffLightsForFiveMinutes(number);
   };
 
   #getTurnedOnLightsForFiveMinutes(number) {
@@ -25,7 +25,7 @@ export class BerlinClockConverter {
     return turnedOnLights;
   };  
   
-  getTurnedOffLightsForFiveMinutes(number) {
+  #getTurnedOffLightsForFiveMinutes(number) {
     const numberOfTurnedOffLights = 11 - Math.floor(number / 5);
 
     return "O".repeat(numberOfTurnedOffLights);
