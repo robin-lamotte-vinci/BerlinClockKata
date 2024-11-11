@@ -217,4 +217,12 @@ describe("BerlinClockConverter class should implements the conversion time in a 
     });
 
   });
+
+  describe("convertSimpleHoursRow method should return the conversion of a number into a single hours row\n", function () {
+    it("given 0 should return 'OOOO'", function () {
+      const result = berlinClockConverter.convertSimpleHoursRow(0);
+
+      expect(result).toBe("OOOO");
+    });
+  });
 });

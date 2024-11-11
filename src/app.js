@@ -30,4 +30,9 @@ export class BerlinClockConverter {
 
     return "O".repeat(numberOfTurnedOffLights);
   };
+
+  convertSimpleHoursRow(number) {
+
+    return "OOOO";
+  };
 };
