@@ -1,4 +1,25 @@
 export class BerlinClockConverter {
+
+  convertTimeToBerlinClock(time) {
+    let [hours, minutes, seconds] = time.split(":");
+
+    hours = parseInt(hours);
+    minutes = parseInt(minutes);
+    seconds = parseInt(seconds);
+
+    const simpleMinutesRow = this.convertSimpleMinutesRow(minutes);
+    const fiveMinutesRow = this.convertFiveMinutesRow(minutes);
+    const simpleHoursRow = this.convertSimpleHoursRow(hours);
+    const fiveHoursRow = this.convertFiveHoursRow(hours);
+    const secondsBeacon = this.convertSecondsBeacon(seconds);
+
+    return `${secondsBeacon}\n${fiveHoursRow}\n${simpleHoursRow}\n${fiveMinutesRow}\n${simpleMinutesRow}`;
+  };
+
+
+
+
+
   convertSimpleMinutesRow(minutes) {
     return this.#getYellowLightsForSimpleMinutes(minutes) + this.#getTurnedOffLightsForSimpleMinutes(minutes);
   };

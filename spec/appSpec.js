@@ -378,10 +378,18 @@ describe("BerlinClockConverter class should implements the conversion time in a 
       expect(result).toBe("R");
     });
 
+  });
 
 
+  describe("convertTimeToBerlinClock method should return the conversion of a time into a berlin clock representation\n", function () {
 
+    it("given 00:00:00 should return 'R\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO'", function () {
+      const result = berlinClockConverter.convertTimeToBerlinClock("00:00:00");
 
+      expect(result).toBe("R\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
+    });
+
+    
 
 
   });
