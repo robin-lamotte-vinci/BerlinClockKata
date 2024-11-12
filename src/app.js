@@ -32,10 +32,13 @@ export class BerlinClockConverter {
   };
 
   convertSimpleHoursRow(hours) {
-    if (hours % 5 == 1) return "ROOO";
-    if (hours % 5 == 2) return "RROO";
-    if (hours % 5 == 3) return "RRRO";
-    if (hours % 5 == 4) return "RRRR";
+    const numberOfTurnedOnLights = hours % 5;
+    const turnedOnLights = "R".repeat(numberOfTurnedOnLights);
+
+    if (hours % 5 == 1) return turnedOnLights + "OOO";
+    if (hours % 5 == 2) return turnedOnLights + "OO";
+    if (hours % 5 == 3) return turnedOnLights + "O";
+    if (hours % 5 == 4) return turnedOnLights +  "";
    
     return "OOOO";
   };
