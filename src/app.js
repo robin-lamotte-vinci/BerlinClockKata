@@ -54,11 +54,12 @@ export class BerlinClockConverter {
 
   convertFiveHoursRow(hours){
     const numberOfTurnedOnLights = Math.floor(hours / 5);
+    const turnedOnLights = "R".repeat(numberOfTurnedOnLights);
 
-    if (numberOfTurnedOnLights === 4) return "RRRR";
-    if (numberOfTurnedOnLights === 3) return "RRRO";
-    if (numberOfTurnedOnLights === 2) return "RROO";
-    if (numberOfTurnedOnLights === 1) return "ROOO";
+    if (numberOfTurnedOnLights === 4) return turnedOnLights + "";
+    if (numberOfTurnedOnLights === 3) return turnedOnLights + "O";
+    if (numberOfTurnedOnLights === 2) return turnedOnLights + "OO";
+    if (numberOfTurnedOnLights === 1) return turnedOnLights + "OOO";
     
     
 
