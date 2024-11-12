@@ -34,7 +34,8 @@ export class BerlinClockConverter {
   convertSimpleHoursRow(hours) {
     const numberOfTurnedOnLights = hours % 5;
     const turnedOnLights = "R".repeat(numberOfTurnedOnLights);
-    const turnedOffLights = "O".repeat(4 - numberOfTurnedOnLights);
+    const numberOfTurnedOffLights = 4 - hours % 5;
+    const turnedOffLights = "O".repeat(numberOfTurnedOffLights);
 
     if (hours % 5 == 1) return turnedOnLights + turnedOffLights;
     if (hours % 5 == 2) return turnedOnLights + turnedOffLights;
