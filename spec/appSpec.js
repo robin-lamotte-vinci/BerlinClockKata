@@ -289,5 +289,11 @@ describe("BerlinClockConverter class should implements the conversion time in a 
 
       expect(result).toBe("OOOO");
     });
+
+    it("given 1 should return 'OOOO'",function () {
+      const result = berlinClockConverter.convertFiveHoursRow(1);
+
+      expect(result).toBe("OOOO");
+    });
   });
 });
