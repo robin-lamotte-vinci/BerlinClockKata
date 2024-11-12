@@ -13,7 +13,7 @@ export class BerlinClockConverter {
     const fiveHoursRow = this.convertFiveHoursRow(hours);
     const secondsBeacon = this.convertSecondsBeacon(seconds);
 
-    return `${secondsBeacon}\n${fiveHoursRow}\n${simpleHoursRow}\n${fiveMinutesRow}\n${simpleMinutesRow}`;
+    return `\n${secondsBeacon}\n${fiveHoursRow}\n${simpleHoursRow}\n${fiveMinutesRow}\n${simpleMinutesRow}`;
   };
 
 
