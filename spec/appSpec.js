@@ -248,7 +248,12 @@ describe("BerlinClockConverter class should implements the conversion time in a 
 
       expect(result).toBe("RRRR");
     });
+    
+    it("given 5 should return 'OOOO'", function () {
+      const result = berlinClockConverter.convertSimpleHoursRow(5);
 
+      expect(result).toBe("OOOO");
+    });
 
   });
 });
