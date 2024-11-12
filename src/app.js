@@ -34,12 +34,13 @@ export class BerlinClockConverter {
   convertSimpleHoursRow(hours) {
     const numberOfTurnedOnLights = hours % 5;
     const turnedOnLights = "R".repeat(numberOfTurnedOnLights);
+    const turnedOffLights = "O".repeat(4 - numberOfTurnedOnLights);
 
-    if (hours % 5 == 1) return turnedOnLights + "OOO";
-    if (hours % 5 == 2) return turnedOnLights + "OO";
-    if (hours % 5 == 3) return turnedOnLights + "O";
-    if (hours % 5 == 4) return turnedOnLights +  "";
+    if (hours % 5 == 1) return turnedOnLights + turnedOffLights;
+    if (hours % 5 == 2) return turnedOnLights + turnedOffLights;
+    if (hours % 5 == 3) return turnedOnLights + turnedOffLights;
+    if (hours % 5 == 4) return turnedOnLights + turnedOffLights;
    
-    return "OOOO";
+    return turnedOffLights;
   };
 };
