@@ -36,6 +36,7 @@ export class BerlinClockConverter {
     if (hours == 2) return "RROO";
     if (hours == 3) return "RRRO";
     if (hours == 4) return "RRRR";
+    if (hours == 6) return "ROOO";
 
     return "OOOO";
   };
