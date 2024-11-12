@@ -33,7 +33,8 @@ export class BerlinClockConverter {
 
   convertSimpleHoursRow(hours) {
     if (hours == 1) return "ROOO";
-    
+    if (hours == 2) return "RROO";
+
     return "OOOO";
   };
 };
