@@ -51,4 +51,11 @@ export class BerlinClockConverter {
 
     return turnedOnLights;
   }
+
+  convertFiveHoursRow(hours){
+
+    return "OOOO";
+  
+
+  }
 };

@@ -282,4 +282,12 @@ describe("BerlinClockConverter class should implements the conversion time in a 
 
 
   });
+
+  describe("convertFiveHoursRow method should return the conversion of a number into a five hours row\n", function () {
+    it("given 0 should return 'OOOO'", function () {
+      const result = berlinClockConverter.convertFiveHoursRow(0);
+
+      expect(result).toBe("OOOO");
+    });
+  });
 });
