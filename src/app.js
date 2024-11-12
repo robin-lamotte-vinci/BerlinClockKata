@@ -55,8 +55,7 @@ export class BerlinClockConverter {
   convertFiveHoursRow(hours){
     const numberOfTurnedOnLights = Math.floor(hours / 5);
     const turnedOnLights = this.getTurnedOnLightsForFiveHours(hours);
-    const numberOfTurnedOffLights = 4 - numberOfTurnedOnLights;
-    const turnedOffLights = "O".repeat(numberOfTurnedOffLights);
+    const turnedOffLights = this.getTurnedOffLightsForFiveHours(hours);
 
     if (numberOfTurnedOnLights === 4) return turnedOnLights + turnedOffLights;
     if (numberOfTurnedOnLights === 3) return turnedOnLights + turnedOffLights;
@@ -71,6 +70,12 @@ export class BerlinClockConverter {
 
 
 
+
+  getTurnedOffLightsForFiveHours(hours) {
+    const numberOfTurnedOffLights = 4 - Math.floor(hours / 5);
+    const turnedOffLights = "O".repeat(numberOfTurnedOffLights);
+    return turnedOffLights;
+  }
 
   getTurnedOnLightsForFiveHours(hours) {
     const numberOfTurnedOnLights = Math.floor(hours / 5);
