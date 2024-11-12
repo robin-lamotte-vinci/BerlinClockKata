@@ -78,7 +78,8 @@ export class BerlinClockConverter {
 
   convertSecondsBeacon(seconds){
     if (seconds === 1) return "O";
-    
+    if(seconds === 2) return "R";
+
     return "R";
   };
 
