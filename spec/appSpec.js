@@ -338,5 +338,11 @@ describe("BerlinClockConverter class should implements the conversion time in a 
       expect(result).toBe("RRRR");
     });
 
+    it("given 21 should return 'RRRR'", function () {
+      const result = berlinClockConverter.convertFiveHoursRow(21);
+
+      expect(result).toBe("RRRR");
+    });
+
   });
 });
