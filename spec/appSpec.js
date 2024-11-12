@@ -307,5 +307,12 @@ describe("BerlinClockConverter class should implements the conversion time in a 
 
       expect(result).toBe("ROOO");
     });
+
+    it("given 10 should return 'RROO'", function () {
+      const result = berlinClockConverter.convertFiveHoursRow(10);
+
+      expect(result).toBe("RROO");
+    });
+    
   });
 });
