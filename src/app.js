@@ -35,12 +35,7 @@ export class BerlinClockConverter {
     const turnedOnLights = this.getTurnedOnLightsForSimpleHours(hours);
     const turnedOffLights = this.getTurnedOffLightsForSimpleHours(hours);
 
-    if (hours % 5 == 1) return turnedOnLights + turnedOffLights;
-    if (hours % 5 == 2) return turnedOnLights + turnedOffLights;
-    if (hours % 5 == 3) return turnedOnLights + turnedOffLights;
-    if (hours % 5 == 4) return turnedOnLights + turnedOffLights;
-   
-    return turnedOffLights;
+    return turnedOnLights + turnedOffLights;
   };
 
   getTurnedOffLightsForSimpleHours(hours) {
