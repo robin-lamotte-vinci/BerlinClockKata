@@ -53,8 +53,7 @@ export class BerlinClockConverter {
   }
 
   convertFiveHoursRow(hours){
-    if (hours === 21) return "RRRR";
-    if (hours === 20) return "RRRR";
+    if (hours >= 20) return "RRRR";
     if (hours >= 15) return "RRRO";
     if (hours >= 10) return "RROO";
     if (hours >= 5) return "ROOO";
