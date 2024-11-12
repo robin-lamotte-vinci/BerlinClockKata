@@ -224,5 +224,13 @@ describe("BerlinClockConverter class should implements the conversion time in a 
 
       expect(result).toBe("OOOO");
     });
+
+    it("given 1 should return 'ROOO'", function () {
+      const result = berlinClockConverter.convertSimpleHoursRow(1);
+
+      expect(result).toBe("ROOO");
+    });
+
+
   });
 });
