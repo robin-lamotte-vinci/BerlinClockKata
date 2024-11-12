@@ -372,6 +372,8 @@ describe("BerlinClockConverter class should implements the conversion time in a 
       expect(result).toBe("O");
     });
 
+    
+
 
 
 
