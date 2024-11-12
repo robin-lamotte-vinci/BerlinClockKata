@@ -32,8 +32,7 @@ export class BerlinClockConverter {
   };
 
   convertSimpleHoursRow(hours) {
-    const numberOfTurnedOnLights = hours % 5;
-    const turnedOnLights = "R".repeat(numberOfTurnedOnLights);
+    const turnedOnLights = this.getTurnedOnLightsForSimpleHours(hours);
     const numberOfTurnedOffLights = 4 - hours % 5;
     const turnedOffLights = "O".repeat(numberOfTurnedOffLights);
 
@@ -44,4 +43,10 @@ export class BerlinClockConverter {
    
     return turnedOffLights;
   };
+
+  getTurnedOnLightsForSimpleHours(hours) {
+    const numberOfTurnedOnLights = hours % 5;
+    const turnedOnLights = "R".repeat(numberOfTurnedOnLights);
+    return turnedOnLights;
+  }
 };
