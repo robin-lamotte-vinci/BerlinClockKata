@@ -389,7 +389,11 @@ describe("BerlinClockConverter class should implements the conversion time in a 
       expect(result).toBe("R\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
     });
 
-    
+    it("given 11:15:03 should return 'O\nRROO\nROOO\nYYROOOOOOOO\nOOOO'", function () {
+      const result = berlinClockConverter.convertTimeToBerlinClock("11:15:03");
+
+      expect(result).toBe("O\nRROO\nROOO\nYYROOOOOOOO\nOOOO");
+    });
 
 
   });
