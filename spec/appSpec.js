@@ -354,6 +354,12 @@ describe("BerlinClockConverter class should implements the conversion time in a 
       expect(result).toBe("R");
     });
 
+    it("given 1 should return 'O'", function () {
+      const result = berlinClockConverter.convertSecondsBeacon(1);
+
+      expect(result).toBe("O");
+    });
+
 
 
 
