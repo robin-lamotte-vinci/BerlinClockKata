@@ -61,8 +61,6 @@ export class BerlinClockConverter {
   };
 
 
-
-
   #getTurnedOffLightsForFiveHours(hours) {
     const numberOfTurnedOffLights = 4 - Math.floor(hours / 5);
     const turnedOffLights = "O".repeat(numberOfTurnedOffLights);
@@ -76,4 +74,10 @@ export class BerlinClockConverter {
 
     return turnedOnLights;
   };
+
+
+  convertSecondsBeacon(seconds){
+    return "R";
+  };
+
 };

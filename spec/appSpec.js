@@ -345,4 +345,21 @@ describe("BerlinClockConverter class should implements the conversion time in a 
     });
 
   });
+
+  describe("convertSecondsBeacon method should return the conversion of a number into a seconds Beacon\n", function () {
+
+    it("given 0 should return 'R'", function () {
+      const result = berlinClockConverter.convertSecondsBeacon(0);
+
+      expect(result).toBe("R");
+    });
+
+
+
+
+
+  });
+
+
+
 });
