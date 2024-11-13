@@ -3,6 +3,10 @@ export class BerlinClockConverter {
   convertTimeToBerlinClock(time) {
     let [hours, minutes, seconds] = time.split(":");
 
+    if (!/^\d{1,2}:\d{1,2}:\d{1,2}$/.test(time)) {
+      throw new Error("Invalid time format. Expected format is hh:mm:ss");
+    }
+
     hours = parseInt(hours);
     minutes = parseInt(minutes);
     seconds = parseInt(seconds);

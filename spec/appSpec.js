@@ -395,6 +395,12 @@ describe("BerlinClockConverter class should implements the conversion time in a 
       expect(result).toBe("\nO\nRROO\nROOO\nYYROOOOOOOO\nOOOO");
     });
 
+    it("given invalid format return an exception", function () {
+      expect(() => berlinClockConverter.convertTimeToBerlinClock("11:15")).toThrowError("Invalid time format. Expected format is hh:mm:ss");
+    });
+
+
+
 
   });
 
