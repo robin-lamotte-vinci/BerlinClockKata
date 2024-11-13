@@ -399,6 +399,18 @@ describe("BerlinClockConverter class should implements the conversion time in a 
       expect(() => berlinClockConverter.convertTimeToBerlinClock("11:15")).toThrowError("Invalid time format. Expected format is hh:mm:ss");
     });
 
+    it("given invalid hours return an exception", function () {
+      expect(() => berlinClockConverter.convertTimeToBerlinClock("25:15:03")).toThrowError("Invalid hours. Expected value between 0 and 24");
+    });
+
+    it("given invalid minutes return an exception", function () {
+      expect(() => berlinClockConverter.convertTimeToBerlinClock("11:60:03")).toThrowError("Invalid minutes. Expected value between 0 and 59");
+    });
+
+    it("given invalid seconds return an exception", function () {
+      expect(() => berlinClockConverter.convertTimeToBerlinClock("11:15:60")).toThrowError("Invalid seconds. Expected value between 0 and 59");
+    });
+
 
 
 

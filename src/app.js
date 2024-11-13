@@ -11,6 +11,16 @@ export class BerlinClockConverter {
     minutes = parseInt(minutes);
     seconds = parseInt(seconds);
 
+    if (hours < 0 || hours > 24) {
+      throw new Error("Invalid hours. Expected value between 0 and 24");
+    }
+    if (minutes < 0 || minutes > 59) {
+      throw new Error("Invalid minutes. Expected value between 0 and 59");
+    }
+    if (seconds < 0 || seconds > 59) {
+      throw new Error("Invalid seconds. Expected value between 0 and 59");
+    }
+
     const simpleMinutesRow = this.convertSimpleMinutesRow(minutes);
     const fiveMinutesRow = this.convertFiveMinutesRow(minutes);
     const simpleHoursRow = this.convertSimpleHoursRow(hours);
