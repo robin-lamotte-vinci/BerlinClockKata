@@ -27,12 +27,12 @@ export class BerlinClockConverter {
 
   convertSimpleMinutesRow(minutes) {
     return (
-      this.#getYellowLightsForSimpleMinutes(minutes) +
+      this.#getTurnedOnLightsForSimpleMinutes(minutes) +
       this.#getTurnedOffLightsForSimpleMinutes(minutes)
     );
   }
 
-  #getYellowLightsForSimpleMinutes(minutes) {
+  #getTurnedOnLightsForSimpleMinutes(minutes) {
     const numberOfTurnedOnLights = minutes % 5;
 
     return "Y".repeat(numberOfTurnedOnLights);
@@ -40,7 +40,7 @@ export class BerlinClockConverter {
 
   #getTurnedOffLightsForSimpleMinutes(minutes) {
     const numberOfTurnedOffLights = 4 - (minutes % 5);
-    
+
     return "O".repeat(numberOfTurnedOffLights);
   }
 
