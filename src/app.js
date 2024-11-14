@@ -33,11 +33,15 @@ export class BerlinClockConverter {
   }
 
   #getYellowLightsForSimpleMinutes(minutes) {
-    return "Y".repeat(minutes % 5);
+    const numberOfTurnedOnLights = minutes % 5;
+
+    return "Y".repeat(numberOfTurnedOnLights);
   }
 
   #getTurnedOffLightsForSimpleMinutes(minutes) {
-    return "O".repeat(4 - (minutes % 5));
+    const numberOfTurnedOffLights = 4 - (minutes % 5);
+    
+    return "O".repeat(numberOfTurnedOffLights);
   }
 
   convertFiveMinutesRow(minutes) {
@@ -54,7 +58,7 @@ export class BerlinClockConverter {
     for (let i = 1; i <= numberOfTurnedOnLights; i++) {
       turnedOnLights += i % 3 === 0 ? "R" : "Y";
     }
-    
+
     return turnedOnLights;
   }
 
