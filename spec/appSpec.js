@@ -35,39 +35,39 @@ describe("BerlinClockConverter class should implements the conversion time in a 
     });
 
     it("given 5 should return 'OOOO'", function () {
-        const result = berlinClockConverter.convertSimpleMinutesRow(5);
-  
-        expect(result).toBe("OOOO");
+      const result = berlinClockConverter.convertSimpleMinutesRow(5);
+
+      expect(result).toBe("OOOO");
     });
 
     it("given 6 should return 'YOOO'", function () {
-        const result = berlinClockConverter.convertSimpleMinutesRow(6);
-  
-        expect(result).toBe("YOOO");
+      const result = berlinClockConverter.convertSimpleMinutesRow(6);
+
+      expect(result).toBe("YOOO");
     });
 
     it("given 7 should return 'YYOO'", function () {
-        const result = berlinClockConverter.convertSimpleMinutesRow(7);
-  
-        expect(result).toBe("YYOO");
+      const result = berlinClockConverter.convertSimpleMinutesRow(7);
+
+      expect(result).toBe("YYOO");
     });
 
     it("given 8 should return 'YYYO'", function () {
-        const result = berlinClockConverter.convertSimpleMinutesRow(8);
-  
-        expect(result).toBe("YYYO");
+      const result = berlinClockConverter.convertSimpleMinutesRow(8);
+
+      expect(result).toBe("YYYO");
     });
 
     it("given 9 should return 'YYYY'", function () {
-        const result = berlinClockConverter.convertSimpleMinutesRow(9);
-  
-        expect(result).toBe("YYYY");
+      const result = berlinClockConverter.convertSimpleMinutesRow(9);
+
+      expect(result).toBe("YYYY");
     });
 
     it("given 10 should return 'OOOO'", function () {
-        const result = berlinClockConverter.convertSimpleMinutesRow(10);
-  
-        expect(result).toBe("OOOO");
+      const result = berlinClockConverter.convertSimpleMinutesRow(10);
+
+      expect(result).toBe("OOOO");
     });
   });
 
@@ -79,45 +79,45 @@ describe("BerlinClockConverter class should implements the conversion time in a 
     });
 
     it("given 1 should return 'OOOOOOOOOOO'", function () {
-        const result = berlinClockConverter.convertFiveMinutesRow(1);
-  
-        expect(result).toBe("OOOOOOOOOOO");
+      const result = berlinClockConverter.convertFiveMinutesRow(1);
+
+      expect(result).toBe("OOOOOOOOOOO");
     });
 
     it("given 5 should return 'YOOOOOOOOOO'", function () {
-        const result = berlinClockConverter.convertFiveMinutesRow(5);
-  
-        expect(result).toBe("YOOOOOOOOOO");
+      const result = berlinClockConverter.convertFiveMinutesRow(5);
+
+      expect(result).toBe("YOOOOOOOOOO");
     });
 
     it("given 6 should return 'YOOOOOOOOOO'", function () {
-        const result = berlinClockConverter.convertFiveMinutesRow(6);
-  
-        expect(result).toBe("YOOOOOOOOOO");
+      const result = berlinClockConverter.convertFiveMinutesRow(6);
+
+      expect(result).toBe("YOOOOOOOOOO");
     });
 
     it("given 10 should return 'YYOOOOOOOOO'", function () {
-        const result = berlinClockConverter.convertFiveMinutesRow(10);
-  
-        expect(result).toBe("YYOOOOOOOOO");
+      const result = berlinClockConverter.convertFiveMinutesRow(10);
+
+      expect(result).toBe("YYOOOOOOOOO");
     });
 
     it("given 11 should return 'YYOOOOOOOOO'", function () {
-        const result = berlinClockConverter.convertFiveMinutesRow(11);
-  
-        expect(result).toBe("YYOOOOOOOOO");
+      const result = berlinClockConverter.convertFiveMinutesRow(11);
+
+      expect(result).toBe("YYOOOOOOOOO");
     });
 
     it("given 15 should return 'YYROOOOOOOO'", function () {
-        const result = berlinClockConverter.convertFiveMinutesRow(15);
-  
-        expect(result).toBe("YYROOOOOOOO");
+      const result = berlinClockConverter.convertFiveMinutesRow(15);
+
+      expect(result).toBe("YYROOOOOOOO");
     });
 
     it("given 16 should return 'YYROOOOOOOO'", function () {
-        const result = berlinClockConverter.convertFiveMinutesRow(16);
-  
-        expect(result).toBe("YYROOOOOOOO");
+      const result = berlinClockConverter.convertFiveMinutesRow(16);
+
+      expect(result).toBe("YYROOOOOOOO");
     });
 
     it("given 20 should return 'YYRYOOOOOOO'", function () {
@@ -179,7 +179,7 @@ describe("BerlinClockConverter class should implements the conversion time in a 
 
       expect(result).toBe("YYRYYRYYOOO");
     });
-    
+
     it("given 45 should return 'YYRYYRYYROO'", function () {
       const result = berlinClockConverter.convertFiveMinutesRow(45);
 
@@ -215,7 +215,6 @@ describe("BerlinClockConverter class should implements the conversion time in a 
 
       expect(result).toBe("YYRYYRYYRYY");
     });
-
   });
 
   describe("convertSimpleHoursRow method should return the conversion of a number into a single hours row\n", function () {
@@ -248,7 +247,7 @@ describe("BerlinClockConverter class should implements the conversion time in a 
 
       expect(result).toBe("RRRR");
     });
-    
+
     it("given 5 should return 'OOOO'", function () {
       const result = berlinClockConverter.convertSimpleHoursRow(5);
 
@@ -278,9 +277,6 @@ describe("BerlinClockConverter class should implements the conversion time in a 
 
       expect(result).toBe("RRRR");
     });
-
-
-
   });
 
   describe("convertFiveHoursRow method should return the conversion of a number into a five hours row\n", function () {
@@ -290,7 +286,7 @@ describe("BerlinClockConverter class should implements the conversion time in a 
       expect(result).toBe("OOOO");
     });
 
-    it("given 1 should return 'OOOO'",function () {
+    it("given 1 should return 'OOOO'", function () {
       const result = berlinClockConverter.convertFiveHoursRow(1);
 
       expect(result).toBe("OOOO");
@@ -343,11 +339,9 @@ describe("BerlinClockConverter class should implements the conversion time in a 
 
       expect(result).toBe("RRRR");
     });
-
   });
 
   describe("convertSecondsBeacon method should return the conversion of a number into a seconds Beacon\n", function () {
-
     it("given 0 should return 'R'", function () {
       const result = berlinClockConverter.convertSecondsBeacon(0);
 
@@ -377,12 +371,9 @@ describe("BerlinClockConverter class should implements the conversion time in a 
 
       expect(result).toBe("R");
     });
-
   });
 
-
   describe("convertTimeToBerlinClock method should return the conversion of a time into a berlin clock representation\n", function () {
-
     it("given 00:00:00 should return '\nR\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO'", function () {
       const result = berlinClockConverter.convertTimeToBerlinClock("00:00:00");
 
@@ -396,26 +387,27 @@ describe("BerlinClockConverter class should implements the conversion time in a 
     });
 
     it("given invalid format return an exception", function () {
-      expect(() => berlinClockConverter.convertTimeToBerlinClock("11:15")).toThrowError("Invalid time format. Expected format is hh:mm:ss");
+      expect(() =>
+        berlinClockConverter.convertTimeToBerlinClock("11:15")
+      ).toThrowError("Invalid time format. Expected format is hh:mm:ss");
     });
 
     it("given invalid hours return an exception", function () {
-      expect(() => berlinClockConverter.convertTimeToBerlinClock("25:15:03")).toThrowError("Invalid hours. Expected value between 0 and 24");
+      expect(() =>
+        berlinClockConverter.convertTimeToBerlinClock("25:15:03")
+      ).toThrowError("Invalid hours. Expected value between 0 and 24");
     });
 
     it("given invalid minutes return an exception", function () {
-      expect(() => berlinClockConverter.convertTimeToBerlinClock("11:60:03")).toThrowError("Invalid minutes. Expected value between 0 and 59");
+      expect(() =>
+        berlinClockConverter.convertTimeToBerlinClock("11:60:03")
+      ).toThrowError("Invalid minutes. Expected value between 0 and 59");
     });
 
     it("given invalid seconds return an exception", function () {
-      expect(() => berlinClockConverter.convertTimeToBerlinClock("11:15:60")).toThrowError("Invalid seconds. Expected value between 0 and 59");
+      expect(() =>
+        berlinClockConverter.convertTimeToBerlinClock("11:15:60")
+      ).toThrowError("Invalid seconds. Expected value between 0 and 59");
     });
-
-
-
-
   });
-
-
-
 });
